@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "multi-step-graphviz": "file:../../graphviz-steps/multi-step-graphviz-1.0.1.tgz"
+    "multi-step-graphviz": "file:../../graphviz-steps/multi-step-graphviz-1.0.2.tgz"
   }
 }

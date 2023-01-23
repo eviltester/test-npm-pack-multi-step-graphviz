@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Test Script Includes</title>
+    </head>
+    <body>
+        <!-- include other cdn's here -->
+        <script src="https://unpkg.com/multi-step-graphviz@1.0.2/dist/graphviz-step-parser.js"></script>
+        <script>
+            window.onload = function(){
+
+            var stepDot=`
+digraph G {
+    a -> b
+    # STEP add c
+    a -> c
+    c -> b
+    # STEP add d
+    a -> d
+    d -> b
+    # END
+    b -> end
+}`;
+
+var stepParser = new GraphvizSteps.GraphvizStepParser();
+stepParser.parse(stepDot);
+var dots = stepParser.dotVersions;
+
+console.log(dots.length);
+
+dots.forEach(element => {
+    console.log(element);
+});
+
+dots.forEach(element => {
+    const dot = document.createElement('pre');
+    dot.innerText = element;
+    document.body.appendChild(dot);    
+});
+
+
+}
+        </script>
+    </body>
+</html>
