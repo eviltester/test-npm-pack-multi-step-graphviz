@@ -1,0 +1,14 @@
+{
+  "name": "test-node-local-file-system-require",
+  "version": "1.0.0",
+  "description": "test the npm install from npm pack local file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "multi-step-graphviz": "file:../../graphviz-steps/multi-step-graphviz-1.0.1.tgz"
+  }
+}
